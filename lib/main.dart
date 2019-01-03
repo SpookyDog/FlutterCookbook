@@ -13,10 +13,16 @@ import 'animations/fadeDemo.dart';
 import 'designs/drawer.dart';
 import 'designs/snackDemo.dart';
 import 'designs/tabbarDemo.dart';
+import 'gestures/inkwellRipple.dart';
+import 'gestures/swipeDismiss.dart';
+import 'images/internetImage.dart';
 import 'navigation/widgetTransition.dart';
 import 'navigation/navigateToAndFrom.dart';
 import 'navigation/bringBackData.dart';
+import 'forms/formValidation.dart';
 import 'network/fetchData.dart';
+import 'persistence/rwFiles.dart';
+import 'persistence/sharingPref.dart';
 import 'util/util.dart';
 
 const KEY_FILE_TOPICS = 'topics.json';
@@ -48,10 +54,16 @@ void main() async {
       '/designs/drawer'          : (context) => DrawerDemo(),
       //'/designs/snackDemo'       : (context) => SnackBarPage(),
       '/designs/tabbarDemo'      : (context) => TabBarDemo(),
+      '/gestures/inkwellRipple'  : (context) => InkwellGestureDemo(),
+      '/gestures/swipeDismiss'   : (context) => SwipeDismiss(),
+      '/images/internetImage'    : (context) => InternetImage(),
       '/navigation/widgetTransition' : (context) => MainScreen(),
       '/navigation/navigateToAndFrom': (context) => FirstScreen(),
       '/navigation/bringBackData'    : (context) => HomeScreen(),
+      '/forms/formValidation'        : (context) => FormValidation(),
       '/network/fetchData'      : (context) => FetchData(),
+      '/persistence/rwFiles'    : (context) => FlutterDemo(storage: CounterStorage()),
+      '/persistence/sharingPref': (context) => SharingPref(),
     },
   ));
 }
